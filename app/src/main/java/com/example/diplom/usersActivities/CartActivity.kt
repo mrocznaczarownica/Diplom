@@ -1,3 +1,4 @@
+package com.example.diplom.usersActivities/*
 package com.example.diplom.usersActivities
 
 import android.content.Intent
@@ -37,11 +38,11 @@ class CartActivity : AppCompatActivity() {
 
         recyclerViewCartItems.layoutManager = LinearLayoutManager(this)
         cartItems = getCartItems()
-        val cartAdapter = CartAdapter(cartItems)
-        recyclerViewCartItems.adapter = cartAdapter
+        //val cartAdapter = CartAdapter(cartItems)
+        //recyclerViewCartItems.adapter = cartAdapter
 
         val totalPrice = calculateTotalPrice(cartItems)
-        textViewTotalPrice.text = getString(R.string.total_price, totalPrice)
+        //textViewTotalPrice.text = getString(R.string.total_price, totalPrice)
 
         buttonPlaceOrder.setOnClickListener {
             placeOrder()
@@ -50,7 +51,7 @@ class CartActivity : AppCompatActivity() {
 
     private fun getCartItems(): List<CartItem> {
         //  здесь код для получения списка товаров из корзины
-        val shoppingCart = ShoppingCart.getInstance(this)
+        //val shoppingCart = ShoppingCart.getInstance(this)
         return shoppingCart.getCartItems()
     }
 
@@ -65,10 +66,10 @@ class CartActivity : AppCompatActivity() {
         val totalPrice = calculateTotalPrice(cartItems)
 
         // Создайте здесь код для отправки заказа на сервер и очистки корзины в локальном хранилище
-        ShoppingCart.getInstance(this).clearCart()
+        //ShoppingCart.getInstance(this).clearCart()
 
         Toast.makeText(this, "Ваш заказ на сумму $totalPrice принят", Toast.LENGTH_SHORT).show()
         finish()
     }
 
-}
+}*/
